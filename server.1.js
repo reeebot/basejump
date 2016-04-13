@@ -5,7 +5,7 @@ var moment = require('moment');
 var url = require('url');
 
 app.route('/').get(function (req, res) {
-	res.sendFile(path + '/public/index.html');
+  res.sendFile(path + '/public/index.html');
 });
 
 app.get('/*', function(req, res) {
@@ -25,5 +25,5 @@ app.get('/*', function(req, res) {
 });
 
 app.listen(8080, function() {
-	console.log('Node.js listening on port 8080 ...')
+  console.log('Node.js listening on port 8080 ...')
 })
