@@ -10,8 +10,9 @@ app.route('/').get(function (req, res) {
 app.get('/*', function(req, res) {
     var requrl = url.parse(req.url).pathname;
     var cleanreq = requrl.replace(/^\/|\/$|%20+/g, '');
-    
+
     if (moment(+cleanreq).isValid()|moment(cleanreq).isValid()){
+        
         if (isNaN(cleanreq)) {
             var unixtime = moment(cleanreq.toString(), "MMMM-DD-YYYY").unix()
             var naturaltime = moment(cleanreq.toString(), "MMMM-DD-YYYY").format("MMMM D, YYYY")
@@ -19,7 +20,8 @@ app.get('/*', function(req, res) {
         else {
             var unixtime = moment(cleanreq.toString(), "MMMM-DD-YYYY").unix()
             var naturaltime = moment.unix(+cleanreq).format("MMMM D, YYYY")
-        }}
+        }
+    }
     else {
         var unixtime = null
         var naturaltime = null
