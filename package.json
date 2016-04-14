@@ -1,31 +1,40 @@
 {
   "name": "rebot-fcc-first",
-  "version": "1.0",
-  "description": "Converts unix time or natural time to both unix and natural time JSON output.",
+  "version": "1.0.0",
+  "description": "timestamp microserver",
   "main": "server.js",
+  "dependencies": {
+    "express": "^4.13.4",
+    "moment": "^2.12.0",
+    "dotenv": "^1.2.0",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.4.12",
+    "passport-github": "^1.1.0",
+    "passport": "^0.3.2",
+    "stylus": "^0.54.2",
+    "pug": "^2.0.0-alpha3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reeebot/basejump"
+    "url": "git+https://github.com/reeebot/basejump.git"
   },
-  "homepage": "https://github.com/reeebot/basejump",
-  "bugs": "https://github.com/reeebot/basejump",
   "keywords": [
-    "full stack",
-    "Express",
-    "Node",
+    "express",
+    "node",
+    "timestamp",
     "javascript",
+    "microserver"
   ],
-  "scripts": {
-  "start": "node server.js"
-  },
   "author": "Tim Meijome",
-  "license": "MIT",
-  "dependencies": {
-    "dotenv": "^1.2.0",
-    "express": "^4.12.4",
-    "express-session": "^1.11.3",
-    "mongoose": "^4.1.0",
-    "passport": "^0.3.0",
-    "passport-github": "^1.0.0"
-  }
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reeebot/basejump/issues"
+  },
+  "homepage": "https://github.com/reeebot/basejump#readme"
 }
