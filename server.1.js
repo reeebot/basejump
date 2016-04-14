@@ -17,14 +17,19 @@ app.get('/*', function(req, res) {
             var naturaltime = moment(cleanreq.toString(), "MMMM-DD-YYYY").format("MMMM D, YYYY")
         }
         else {
-            var unixtime = moment(+cleanreq)
+            var unixtime = moment(cleanreq.toString(), "MMMM-DD-YYYY").unix()
             var naturaltime = moment.unix(+cleanreq).format("MMMM D, YYYY")
         }}
     else {
-        var unixtime = "null"
-        var naturaltime = "null"
+        var unixtime = null
+        var naturaltime = null
     }
-    res.send("{\"unix\":"+unixtime+","+"\"natural\":\""+naturaltime+"\"}")
+    
+    var jsonstring = {
+        unix : unixtime,
+        natural : naturaltime
+    }
+    res.send(JSON.stringify(jsonstring))
 });
 
 app.listen(8080, function() {
