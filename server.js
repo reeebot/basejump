@@ -34,6 +34,6 @@ app.get('/*', function(req, res) {
     res.send(JSON.stringify(jsonstring))
 });
 
-app.listen(80, function() {
+app.listen($PORT, function() {
 	console.log('Node.js listening on port 8080 ...')
 })
