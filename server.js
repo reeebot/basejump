@@ -19,7 +19,7 @@ app.get('/*', function(req, res) {
             var naturaltime = moment(cleanreq.toString(), "MMMM-DD-YYYY").format("MMMM D, YYYY")
         }
         else {
-            var unixtime = moment(+cleanreq, "MMMM-DD-YYYY").unix()
+            var unixtime = moment.unix(+cleanreq, "MMMM-DD-YYYY").unix()
             var naturaltime = moment.unix(+cleanreq).format("MMMM D, YYYY")
         }
     }
